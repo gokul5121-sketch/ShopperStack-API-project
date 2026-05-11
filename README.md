@@ -62,18 +62,14 @@ npm install -g newman
 
 Run the collection:
 ```bash
-newman run collection/SS_final_postman_collection.json \
-  -e environment/ShopperStack_env.json
+newman run "B:\shopperstack-api-testing\collection\SS_final.postman_collection.json" -e "B:\shopperstack-api-testing\environment\ShopperEV.postman_environment.json" --insecure
 ```
 
 Run with HTML report:
 ```bash
 npm install -g newman-reporter-htmlextra
 
-newman run collection/SS_final_postman_collection.json \
-  -e environment/ShopperStack_env.json \
-  -r htmlextra \
-  --reporter-htmlextra-export reports/newman-report.html
+newman run "B:\shopperstack-api-testing\collection\SS_final.postman_collection.json" -e "B:\shopperstack-api-testing\environment\ShopperEV.postman_environment.json" --insecure -r htmlextra --reporter-htmlextra-export "B:\shopperstack-api-testing\reports\newman-report.html"
 ```
 
 Then open `reports/newman-report.html` in your browser to view the full test report.
